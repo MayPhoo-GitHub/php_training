@@ -17,10 +17,10 @@
         <?php if (isset($_GET['incorrect'])) :?>
         <div class="alert alert-warning">
             Incorrect Email or Password 
-    </div>
+    	</div>
     <?php endif ?>
 
-    <form action="_actions/login.php"method="post">
+    <form action="_actions/login.php" method="post">
       <input 
         type="email" name="email"
         class="form-control mb-2"
@@ -36,8 +36,6 @@
         Login
       </button>
     </form>
-    <br>
-    <a href="register.php">Register</a>
   
 </body>
 </html>
