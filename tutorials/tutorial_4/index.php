@@ -11,12 +11,12 @@
 
 </head>
 <body class="text-center">
-  <div class="wrap">
-    <h1 class="h3 mb-3">Login</h1>
+    <div class="wrap">
+        <h1 class="h3 mb-3">Login</h1>
 
-    <?php if (isset($_GET['incorrect'])) :?>
-      <div class="alert alert-warning">
-        Incorrect Email or Password 
+        <?php if (isset($_GET['incorrect'])) :?>
+        <div class="alert alert-warning">
+            Incorrect Email or Password 
     </div>
     <?php endif ?>
 
