@@ -5,17 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Tutorial_1</title>
 </head>
 <body>
 <?php
 echo '<table>';
-for ($i = 1; $i<9;$i++) {
+for ($row = 1; $row <9;$row++) {
     echo '<tr>';
-    for ($j = 1; $j<9; $j++) {
-        $total = $i+$j;
+    for ($column = 1; $column<9; $column++) {
+        $total = $row+$column;
         if ($total %2 == 0) {
             echo '<td class="black"> </td>';
         } else {

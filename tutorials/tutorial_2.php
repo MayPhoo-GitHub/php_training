@@ -1,30 +1,19 @@
 <?php
- $m=1; $n = 6;
- // this loop prints the upper half of the polygon
-for ($i = 1; $i <= 6; $i++) {
-    for ($j = $i; $j <= 5; $j++) {
+echo "<pre>";
+for ($row = 1; $row < 6; $row++) {
+    for ($output = $row; $output < 6; $output++)
         echo "&nbsp;&nbsp;";
-    }
-    for ($k = 1; $k <= $m; $k++) {
-        echo "*";
-    }
-    for ($c = $m; $c>1; $c--) {
-        echo "*";
-    }
+    for ($output = 2 * $row - 1; $output > 0; $output--)
+        echo ("&nbsp;*");
     echo "<br>";
-    $m++;
 }
- // this loop prints the lower half of the polygon
-for ($i = 1; $i <= 6; $i++) {
-    for ($j = $i; $j >= 1; $j--) {
+$row_count = 6;
+for ($row = 6; $row > 0; $row--) {
+    for ($output = $row_count - $row; $output > 0; $output--)
         echo "&nbsp;&nbsp;";
-    }
-    for ($k = $n; $k > 1; $k--) {
-        echo "*";
-    }
-    for ($c = $n-1; $c > 1; $c--) {
-        echo "*";
-    }
+    for ($output = 2 * $row - 1; $output > 0; $output--)
+        echo ("&nbsp;*");
     echo "<br>";
-    $n--;
 }
+echo "</pre>";
+?>
