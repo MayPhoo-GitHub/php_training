@@ -1,0 +1,7 @@
+.wrapper{
+  width: 80%;
+  margin: 0 auto;
+}
+table tr td:last-child{
+  width: 15%;
+}
