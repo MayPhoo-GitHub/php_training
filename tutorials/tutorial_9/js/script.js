@@ -15,7 +15,7 @@ function showGraph() {
     labels: position,
     datasets: [
       {
-        label: "Salary Graph",
+        label: "Salary of Employees",
         backgroundColor: "#49e2ff",
         borderColor: "#46d5f1",
         hoverBackgroundColor: "#cccccc",

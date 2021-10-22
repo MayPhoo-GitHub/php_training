@@ -1,12 +1,3 @@
-<?php
-
-session_start();
-if(!isset($_SESSION['user'])){
-  header('location:index.php');
-  exit();
-}
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,22 +8,29 @@ if(!isset($_SESSION['user'])){
   <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
-  <div class="container mt-5">
-    <h1 class="mb-3">May Phoo Wai (OJT)</h1>
-    <ul class="list-group">
-      <li class="list-group-item">
-        <b>Email:</b>mayphoowai@gmail.com
-      </li>
-      <li class="list-group-item">
-        <b>Phone:</b>(09)243 867 645
-      </li>
-      <li class="list-group-item">
-        <b>Address:</b>No.321,Main Street,West City
-      </li>
-    </ul>
-    <br>
+    <?php
 
-    <a href="_actions/logout.php">Logout</a>
-</div>
+    session_start();
+    if (!isset($_SESSION['user'])) {
+        header('location:index.php');
+    }
+
+    ?>
+    <div class="container mt-5">
+        <h1 class="mb-3">May Phoo Wai (OJT)</h1>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <b>Email:</b>mayphoowai@gmail.com
+            </li>
+            <li class="list-group-item">
+                <b>Phone:</b>(09)243 867 645
+            </li>
+            <li class="list-group-item">
+                <b>Address:</b>No.321,Main Street,West City
+            </li>
+        </ul>
+        <br>
+        <a href="_actions/logout.php">Logout</a>
+    </div>
 </body>
 </html>
