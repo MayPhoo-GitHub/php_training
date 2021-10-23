@@ -22,7 +22,7 @@
             <li class="list-group-item">
                 <b>Email:</b>
                 <?php
-                    echo $_SESSION['user']['userEmail'];
+                    echo $_SESSION['user']['email'];
                 ?>
             </li>
             <li class="list-group-item">

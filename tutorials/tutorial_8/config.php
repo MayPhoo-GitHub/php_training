@@ -20,9 +20,7 @@
     position VARCHAR(30) NOT NULL,
     salary INT(32) NOT NULL
     )";
-    
-    if (mysqli_query($link, $sql)) {
-        $sql = "INSERT INTO employees (firstname, lastname, email, phone, dob)
-        VALUES ('John', 'Doe', 'john@example.com',  )";
-    }
+
+mysqli_query($link, $sql);
+
 ?>
