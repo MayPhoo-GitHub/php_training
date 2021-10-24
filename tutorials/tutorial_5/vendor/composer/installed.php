@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
+        'type' => 'library',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'reference' => 'c3e7f07f177d22ffb76d1d0eda91e6e01d0bac2a',
+        'name' => 'mayphoo/tutorial_5',
+        'dev' => true,
+    ),
+    'versions' => array(
+        'mayphoo/tutorial_5' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'reference' => 'c3e7f07f177d22ffb76d1d0eda91e6e01d0bac2a',
+            'dev_requirement' => false,
+        ),
+        'shuchkin/simplecsv' => array(
+            'pretty_version' => '0.1.1',
+            'version' => '0.1.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../shuchkin/simplecsv',
+            'aliases' => array(),
+            'reference' => 'f5c9d15e7dbe4956c1140f5e3b7befef840f943d',
+            'dev_requirement' => false,
+        ),
+        'shuchkin/simplexlsx' => array(
+            'pretty_version' => '0.8.27',
+            'version' => '0.8.27.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../shuchkin/simplexlsx',
+            'aliases' => array(),
+            'reference' => 'ffdbfaee68c43f3c2b63a6a3775e3421710e0ec4',
+            'dev_requirement' => false,
+        ),
+    ),
+);

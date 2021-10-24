@@ -11,10 +11,9 @@
 </head>
 <body>
     <?php
-
-    //load the ar library
     if (!empty($_POST["text"])) {
         include "library/phpqrcode/qrlib.php";
+        //load the qr library
         $text = $_POST["text"];
         $name = $_POST["name"];
         //file path
@@ -28,8 +27,8 @@
         QRcode::png($text, $file, $ecc, $pixel_size, $frame_size);
         
         // Displaying the stored QR code if you want
-        echo "<img src='" . $file . "'>";
-        echo "<a href='index.php'>Generate New Code</a></div>";
+        echo "<img src='" . $file . "'alt= 'QR' >";
+        echo "<a href='index.php'>Generate New Code</a>";
     } else {
         header("location: index.php?error=1");
     }

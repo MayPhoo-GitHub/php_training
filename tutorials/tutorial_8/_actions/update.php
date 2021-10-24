@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Update Record</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <?php
     // Include config file
-    require_once "config.php";
+    require_once "../config.php";
     
     // Define variables and initialize with empty values
     $fname = $lname =  $email = $salary = $position = "";
@@ -77,7 +77,7 @@
                 // Attempt to execute the prepared statement
                 if(mysqli_stmt_execute($stmt)){
                     // Records updated successfully. Redirect to landing page
-                    header("location: index.php");
+                    header("location: ../index.php");
                     exit();
                 } else {
                     echo "Oops! Something went wrong. Please try again later.";
@@ -179,7 +179,7 @@
                         <br>
                         <input type="hidden" name="id" value="<?php echo $id; ?>"/>
                         <input type="submit" class="btn btn-primary" value="Submit">
-                        <a href="index.php" class="btn btn-secondary ml-2">Cancel</a>
+                        <a href="../index.php" class="btn btn-secondary ml-2">Cancel</a>
                     </form>
                 </div>
             </div>        

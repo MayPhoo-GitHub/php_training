@@ -14,13 +14,13 @@
         <form action="generate.php" method="post">
             <h1>QR Code Generator</h1>
             <?php if (isset($_GET['error'])): ?>
-                    <div class="alert alert-warning">
-                        Fail to Generate
-                    </div>
+                <div class="alert alert-warning">
+                    Fail to Generate
+                </div>
             <?php endif?>            
             <input type="text" name="name" placeholder="Enter QR code Name"><br><br>
             <textarea name="text" placeholder="Enter Your Data "></textarea><br>
-            <button class="btn btn-primary"> Generate </button><br><br>
+            <input type="submit" text="generate"><br><br>
         
         </form>
     </div>

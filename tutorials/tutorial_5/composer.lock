@@ -1,0 +1,120 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "29374dc06769f2613745531c486f94fb",
+    "packages": [
+        {
+            "name": "shuchkin/simplecsv",
+            "version": "0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/shuchkin/simplecsv.git",
+                "reference": "f5c9d15e7dbe4956c1140f5e3b7befef840f943d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/shuchkin/simplecsv/zipball/f5c9d15e7dbe4956c1140f5e3b7befef840f943d",
+                "reference": "f5c9d15e7dbe4956c1140f5e3b7befef840f943d",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/SimpleCSV.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sergey Shuchkin (SMSPILOT)",
+                    "email": "sergey.shuchkin@gmail.com",
+                    "homepage": "https://shuchkin.ru/"
+                }
+            ],
+            "description": "Parse and retrieve data from CSV files. Export data to CSV.",
+            "homepage": "https://github.com/shuchkin/simplecsv",
+            "keywords": [
+                "backend",
+                "csv",
+                "excel",
+                "export",
+                "import",
+                "parser",
+                "php",
+                "read",
+                "write"
+            ],
+            "support": {
+                "issues": "https://github.com/shuchkin/simplecsv/issues",
+                "source": "https://github.com/shuchkin/simplecsv/tree/0.1.1"
+            },
+            "time": "2021-04-28T10:01:55+00:00"
+        },
+        {
+            "name": "shuchkin/simplexlsx",
+            "version": "0.8.27",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/shuchkin/simplexlsx.git",
+                "reference": "ffdbfaee68c43f3c2b63a6a3775e3421710e0ec4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/shuchkin/simplexlsx/zipball/ffdbfaee68c43f3c2b63a6a3775e3421710e0ec4",
+                "reference": "ffdbfaee68c43f3c2b63a6a3775e3421710e0ec4",
+                "shasum": ""
+            },
+            "require": {
+                "ext-libxml": "*",
+                "ext-simplexml": "*",
+                "ext-zlib": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/SimpleXLSX.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sergey Shuchkin (SMSPILOT)",
+                    "email": "sergey.shuchkin@gmail.com",
+                    "homepage": "http://www.shuchkin.ru/"
+                }
+            ],
+            "description": "Parse and retrieve data from Excel XLSx files. MS Excel 2007 workbooks PHP reader.",
+            "homepage": "https://github.com/shuchkin/simplexlsx",
+            "keywords": [
+                "backend",
+                "excel",
+                "parser",
+                "php",
+                "xlsx"
+            ],
+            "support": {
+                "issues": "https://github.com/shuchkin/simplexlsx/issues",
+                "source": "https://github.com/shuchkin/simplexlsx/tree/0.8.27"
+            },
+            "time": "2021-09-29T23:20:51+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.1.0"
+}

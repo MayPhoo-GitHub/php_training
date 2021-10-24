@@ -9,6 +9,9 @@
     <title>Tutorial 5</title>
 </head>
 <body>
+    <?php
+         require_once "vendor/autoload.php";
+    ?>
     <div class="content">
         <h1>Files in Directory</h1>
             <?php
@@ -34,7 +37,7 @@
 	<div class = "content">
 		<h2>Book1.xlsx</h2>
 		<?php
-            require_once "resource/SimpleXLSX.php";
+            require_once "./vendor/shuchkin/simplexlsx/src/SimpleXlsx.php";
             if ($xlsx = SimpleXLSX::parse('files/Book1.xlsx')) {
                 echo '<table border = "1" cellpadding = "3" style = "border-collapse: collapse">';
                 foreach ($xlsx->rows() as $r) {
@@ -48,14 +51,18 @@
 	</div>
 
 	<div class = "content">
-	<h2>Book1.csv</h2>
+	<h2>Book1.csv</h2>			
 	<?php
-        require_once "resource/SimpleCSV.php";
-        if ($csv = SimpleCSV::import('files/Book1.csv')) {
-            echo "<pre>";
-            print_r($csv);
-            echo "</pre>";
-        }
+        require_once "./vendor/shuchkin/simplecsv/src/SimpleCSV.php";
+        if ( $csv = SimpleCSV::import('files/Book1.csv') ) {
+            echo '<table border="1" cellpadding="0" style="border-collapse: collapse">';
+            foreach ($csv as $r) {
+                echo '<tr><td>'.implode('</td><td>', $r).'</td></tr>';
+            }
+            echo '</table>';
+        } else {
+            echo SimpleCSV::parseError();
+        }        
     ?>
 	</div>
 

@@ -8,24 +8,21 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
     <?php
         // Include config file
-        require_once "config.php";
+        require_once "config.php";        
 
-        $sqlQuery = "SELECT salary, position FROM employees GROUP BY position";
+        $sqlQuery = "SELECT AVG(salary) AS avg_salary, position FROM employees GROUP BY position";
         $result = mysqli_query($link, $sqlQuery);
         $data = array();
         foreach ($result as $row) {
             $data[] = $row;
         }
-
         mysqli_close($link);
-        echo $msg;
-        echo '<script> data =' . json_encode($data) . '</script>';
+        echo '<script>var data =' . json_encode($data) . '</script>';
     ?>
+</head>
+<body>
     <div class="wrapper">
         <canvas id="graphCanvas"></canvas>
     </div>

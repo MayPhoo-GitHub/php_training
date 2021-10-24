@@ -1,0 +1,13 @@
+{
+    "name": "mayphoo/tutorial_5",
+    "authors": [
+        {
+            "name": "May Phoo Wai",
+            "email": "mayphoowai14@gmail.com"
+        }
+    ],
+    "require": {
+        "shuchkin/simplexlsx": "^0.8.27",
+        "shuchkin/simplecsv": "^0.1.1"
+    }
+}

@@ -4,13 +4,13 @@ $(document).ready(function () {
 
 function showGraph() {
   var position = [];
-  var salary = [];
+  var avg_salary = [];
 
   for (var i in data) {
     position.push(data[i].position);
-    salary.push(data[i].salary);
+    avg_salary.push(data[i].avg_salary);
   }
-
+  
   var chartdata = {
     labels: position,
     datasets: [
@@ -20,7 +20,7 @@ function showGraph() {
         borderColor: "#46d5f1",
         hoverBackgroundColor: "#cccccc",
         hoverBorderColor: "#666666",
-        data: salary,
+        data: avg_salary,
       },
     ],
   };
