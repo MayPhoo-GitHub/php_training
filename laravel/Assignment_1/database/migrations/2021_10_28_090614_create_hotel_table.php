@@ -18,6 +18,7 @@ class CreateHotelTable extends Migration
             $table->string('hotel_name');
             $table->string('location');
             $table->string('description');
+            $table->timestamps();
         });
     }
 

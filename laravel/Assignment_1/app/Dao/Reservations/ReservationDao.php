@@ -4,6 +4,8 @@ namespace App\Dao\Reservations;
 
 use App\Models\Reservations;
 use App\Contracts\Dao\Reservation\ReservationDaoInterface;
+use App\Exports\ReservationsExport;
+use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Http\Request;
 
 /**
@@ -67,5 +69,12 @@ class ReservationDao implements ReservationDaoInterface
      */
     public function deleteReservation($id) {
         Reservations::findOrFail($id)->delete();
+    }
+    /**
+    * To export reservation
+    */
+    public function exportReservation() 
+    {
+        return Excel::download(new ReservationsExport,'Reservations.xlsx');
     }
 }

@@ -14,4 +14,6 @@ interface HotelServiceInterface
      */
     public function getHotel();
 
+    public function importHotels($request);
+
 }

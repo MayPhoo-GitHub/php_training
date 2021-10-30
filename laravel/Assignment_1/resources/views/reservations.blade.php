@@ -52,6 +52,10 @@
       </div>
     </div>
   </form>
+  <div class="text-right">
+    <a class="btn btn-info" href="/export-reservation">
+    <i class="fas fa-file-export"></i> Export Reservation</a>
+  </div>
 
   <!-- Current reservations -->
   @if (count($reservations) > 0)

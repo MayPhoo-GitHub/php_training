@@ -5,6 +5,8 @@ namespace App\Dao\Hotels;
 use App\Models\Hotels;
 use App\Contracts\Dao\Hotel\hotelDaoInterface;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Imports\HotelsImport;
 
 /**
  * Data accessing object for hotel
@@ -18,6 +20,15 @@ class HotelDao implements hotelDaoInterface
     public function getHotel() {
         $hotels = Hotels::orderBy('id', 'asc')->get();
         return $hotels;
+    }
+
+    /**
+     * To import hotel
+     * @return imported data
+     */
+    public function importHotels($request) {
+        Excel::import(new HotelsImport,$request->file('file')); 
+        return 'imported';        
     }
 
 }

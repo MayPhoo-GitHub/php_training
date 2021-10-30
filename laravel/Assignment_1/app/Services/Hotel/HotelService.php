@@ -33,4 +33,8 @@ class HotelService implements HotelServiceInterface
     public function getHotel() {
         return $this->HotelDao->getHotel();
     }
+
+    public function importHotels($request) {
+        return $this->HotelDao->importHotels($request);
+    }
 }

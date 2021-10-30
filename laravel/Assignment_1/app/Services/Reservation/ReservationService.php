@@ -66,4 +66,8 @@ class ReservationService implements ReservationServiceInterface
     public function deleteReservation($id) {
         $this->ReservationDao->deleteReservation($id);
     }
+
+    public function exportReservation(){
+        return $this->ReservationDao->exportReservation();
+    }
 }

@@ -22,6 +22,11 @@ use App\Http\Controllers\Hotel\HotelController;
  */
 Route::get('/show-hotel', [HotelController::class, 'showHotelList']);
 
+/**
+ * Import Hotel
+ */
+Route::post('/import-hotel', [HotelController::class, 'importHotels']);
+
 
 /**
  * Display All Reservtion
@@ -46,3 +51,8 @@ Route::post('/updateReservation/{id}', [ReservationController::class, 'updateRes
  * Delete An Existing Reservation
  */
 Route::delete('/reservation/{id}', [ReservationController::class, 'deleteReservation']);
+
+/**
+ * Export Reservation
+ */
+Route::get('/export-reservation', [ReservationController::class, 'exportReservation']);

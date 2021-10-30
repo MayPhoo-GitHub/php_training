@@ -82,7 +82,6 @@ class ReservationController extends Controller
         return redirect('/');
     }
 
-
     /**
      * To delete Reservation
      * @param sting $id
@@ -91,5 +90,13 @@ class ReservationController extends Controller
     public function deleteReservation($id) {
         $this->ReservationInterface->deleteReservation($id);
         return redirect('/');
+    }
+
+    /**
+     * To export Reservation
+     * @return View Reservation
+     */
+    public function exportReservation() {
+        return $this->ReservationInterface->exportReservation();
     }
 }

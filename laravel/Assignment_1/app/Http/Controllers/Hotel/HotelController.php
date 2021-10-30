@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Hotel;
 use App\Contracts\Services\Hotel\HotelServiceInterface;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\HotelRequest;
+use App\Http\Requests\ImportRequest;
+use Illuminate\Auth\Events\Validated;
 use Illuminate\Http\Request;
 
 /**
@@ -38,6 +40,17 @@ class HotelController extends Controller
         return view('hotel', [
             'hotels' => $HotelList
         ]);
+    }
+
+    /**
+     * To Import File
+     * @param  $request
+     * @return View imort
+     */
+    public function importHotels(ImportRequest $request) {
+        $validated = $request->validated();
+        $this->HotelInterface->importHotels($request);
+        return redirect('/show-hotel');
     }
 
 }

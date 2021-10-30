@@ -15,4 +15,10 @@ interface hotelDaoInterface
      */
     public function getHotel();
 
+    /**
+     * To import hotel
+     * @return import data
+     */
+    public function importHotels($request);
+
 }

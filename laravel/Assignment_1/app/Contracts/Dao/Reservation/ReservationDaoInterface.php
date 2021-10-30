@@ -42,4 +42,9 @@ interface ReservationDaoInterface
      * @return 
      */
     public function deleteReservation($id);
+
+    /**
+     * To export reservation
+     */
+    public function exportReservation();
 }
