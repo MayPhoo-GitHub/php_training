@@ -16,42 +16,42 @@
     <div class="form-group">
       <label for="name" class="col-sm-3 control-label">Hotel Name</label>
       <div class="col-sm-6">
-      <input type="text" name="name" class="form-control"required placeholder="search by hotel name">
+      <input type="text" name="name" class="form-control" placeholder="search by hotel name">
       </div>
     </div>
 
     <div class="form-group">
       <label for="guests" class="col-sm-3 control-label">Number of guests</label>
       <div class="col-sm-6">
-        <input type="number" min=0 name="guests" class="form-control" required>
+        <input type="number" min=0 name="guests" class="form-control">
       </div>
     </div>
 
     <div class="form-group">
       <label for="arrival" class="col-sm-3 control-label">Arrival</label>
       <div class="col-sm-6">
-        <input type="date" name="arrival" class="form-control"required>
+        <input type="date" name="arrival" class="form-control">
       </div>
     </div>
 
     <div class="form-group">
       <label for="departure" class="col-sm-3 control-label">Departure</label>
       <div class="col-sm-6">
-        <input type="date" name="departure" class="form-control" required>
+        <input type="date" name="departure" class="form-control">
       </div>
     </div>
 
     <div class="form-group">
       <label for="arrival" class="col-sm-3 control-label">Start Date</label>
       <div class="col-sm-6">
-        <input type="date" name="start_date" class="form-control"required>
+        <input type="date" name="start_date" class="form-control">
       </div>
     </div>
 
     <div class="form-group">
       <label for="departure" class="col-sm-3 control-label">End Date</label>
       <div class="col-sm-6">
-        <input type="date" name="end_date" class="form-control" required>
+        <input type="date" name="end_date" class="form-control">
       </div>
     </div>
     

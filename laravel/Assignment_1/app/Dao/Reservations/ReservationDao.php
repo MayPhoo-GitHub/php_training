@@ -85,11 +85,11 @@ class ReservationDao implements ReservationDaoInterface
      */
     public function searchReservation($request) {
         $reservations = DB::select( DB::raw("SELECT * FROM reservations WHERE                                      
-                                      hotel_name = :hotel_name AND
-                                      num_of_guests = :guests AND
-                                      arrival = :arrival AND
-                                      departure = :departure AND
-                                      created_at >= :start_date AND
+                                      hotel_name = :hotel_name OR
+                                      num_of_guests = :guests OR
+                                      arrival = :arrival OR
+                                      departure = :departure OR
+                                      created_at >= :start_date OR
                                       created_at < :end_date"), array(
                                       'hotel_name' => $request->name,
                                       'guests' => $request->guests,
