@@ -39,6 +39,9 @@
         <a class="navbar-brand" href="{{ url('/') }}">
           Reservation
         </a>
+        <a class="navbar-brand" href="{{ url('/search') }}">
+          Search
+        </a>
       </div>
 
     </div>

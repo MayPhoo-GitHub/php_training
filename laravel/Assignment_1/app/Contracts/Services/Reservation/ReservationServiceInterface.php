@@ -39,5 +39,17 @@ interface ReservationServiceInterface
      * @return 
      */
     public function deleteReservation($id);
+
+        /**
+     * To export reservation list
+     * @return reservationList
+     */
+
     public function exportReservation();
+
+    /**
+     * To search reservation
+     * @return reservationList
+     */
+    public function searchReservation($request);
 }

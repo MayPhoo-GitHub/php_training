@@ -47,4 +47,9 @@ interface ReservationDaoInterface
      * To export reservation
      */
     public function exportReservation();
+
+    /**
+     * To show search reservation
+     */
+    public function searchReservation($request);
 }

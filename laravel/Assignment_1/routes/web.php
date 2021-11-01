@@ -56,3 +56,13 @@ Route::delete('/reservation/{id}', [ReservationController::class, 'deleteReserva
  * Export Reservation
  */
 Route::get('/export-reservation', [ReservationController::class, 'exportReservation']);
+
+/**
+ * Display search reservation Form
+ */
+Route::get('/search', [ReservationController::class, 'searchForm']);
+
+/**
+ * Search Reservation
+ */
+Route::post('/search-reservation', [ReservationController::class, 'searchReservation']);

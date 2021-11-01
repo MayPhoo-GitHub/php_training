@@ -6,6 +6,7 @@ use App\Models\Reservation;
 use App\Contracts\Dao\Reservation\ReservationDaoInterface;
 use App\Exports\ReservationsExport;
 use Maatwebsite\Excel\Facades\Excel;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 /**
@@ -77,4 +78,28 @@ class ReservationDao implements ReservationDaoInterface
     {
         return Excel::download(new ReservationsExport,'Reservations.xlsx');
     }
+
+    /**
+     * To To search reservation 
+     * @return reservation
+     */
+    public function searchReservation($request) {
+        $reservations = DB::select( DB::raw("SELECT * FROM reservations WHERE                                      
+                                      hotel_name = :hotel_name AND
+                                      num_of_guests = :guests AND
+                                      arrival = :arrival AND
+                                      departure = :departure AND
+                                      created_at >= :start_date AND
+                                      created_at < :end_date"), array(
+                                      'hotel_name' => $request->name,
+                                      'guests' => $request->guests,
+                                      'arrival' => $request->arrival,
+                                      'departure' => $request->departure,
+                                      'start_date' => $request->start_date,
+                                      'end_date' => $request->end_date,
+                ));
+        return $reservations;
+    }
+
+    
 }

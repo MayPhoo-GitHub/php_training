@@ -99,4 +99,24 @@ class ReservationController extends Controller
     public function exportReservation() {
         return $this->ReservationInterface->exportReservation();
     }
+
+    /**
+     * To display search form
+     * @return View Reservation
+     */
+    public function searchForm() {
+        $reservations = $this->ReservationInterface->getReservation();
+        return view('search', ['reservations' => $reservations]);
+    }
+
+    /**
+     * To search Reservation
+     * @return View Reservation
+     */
+    public function searchReservation(Request $request) {
+        $reservations = $this->ReservationInterface->searchReservation($request);
+        return view('search', ['reservations' => $reservations]);
+    }
+
+
 }
