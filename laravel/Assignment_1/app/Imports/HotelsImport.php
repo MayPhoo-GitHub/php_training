@@ -2,7 +2,7 @@
 
 namespace App\Imports;
 
-use App\Models\Hotels;
+use App\Models\Hotel;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
 
@@ -15,7 +15,7 @@ class HotelsImport implements ToModel, WithHeadingRow
     */
     public function model(array $row)
     {
-        return new Hotels([
+        return new Hotel([
             'hotel_name'     => $row['hotel_name'],
             'location'       => $row['location'],
             'description'    => $row['description'], 

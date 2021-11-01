@@ -2,7 +2,7 @@
 
 namespace App\Exports;
 
-use App\Models\Reservations;
+use App\Models\Reservation;
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 
@@ -13,7 +13,7 @@ class ReservationsExport implements FromCollection, WithHeadings
     */
     public function collection()
     {
-        return Reservations::all();
+        return Reservation::all();
     }
 
     /**

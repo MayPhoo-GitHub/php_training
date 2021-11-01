@@ -2,7 +2,7 @@
 
 namespace App\Dao\Hotels;
 
-use App\Models\Hotels;
+use App\Models\Hotel;
 use App\Contracts\Dao\Hotel\hotelDaoInterface;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
@@ -18,7 +18,7 @@ class HotelDao implements hotelDaoInterface
      * @return hotels
      */
     public function getHotel() {
-        $hotels = Hotels::orderBy('id', 'asc')->get();
+        $hotels = Hotel::orderBy('id', 'asc')->get();
         return $hotels;
     }
 

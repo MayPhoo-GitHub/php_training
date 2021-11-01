@@ -2,7 +2,7 @@
 
 namespace App\Dao\Reservations;
 
-use App\Models\Reservations;
+use App\Models\Reservation;
 use App\Contracts\Dao\Reservation\ReservationDaoInterface;
 use App\Exports\ReservationsExport;
 use Maatwebsite\Excel\Facades\Excel;
@@ -18,7 +18,7 @@ class ReservationDao implements ReservationDaoInterface
      * @return reservations
      */
     public function getReservation() {
-        $reservations = Reservations::orderBy('created_at', 'asc')->get();
+        $reservations = Reservation::orderBy('created_at', 'asc')->get();
         return $reservations;
     }
 
@@ -29,7 +29,7 @@ class ReservationDao implements ReservationDaoInterface
      * @return reservation
      */
     public function getReservationById($id) {
-        $reservation = Reservations::FindorFail($id);
+        $reservation = Reservation::FindorFail($id);
         return $reservation;
     }
 
@@ -40,7 +40,7 @@ class ReservationDao implements ReservationDaoInterface
      * @return Object created reservation object
      */
     public function addReservation($request) {    
-        $reservations = new Reservations();
+        $reservations = new Reservation();
         $reservations->hotel_name = $request->name;
         $reservations->num_of_guests = $request->guest;
         $reservations->arrival = $request->arrival;
@@ -54,7 +54,7 @@ class ReservationDao implements ReservationDaoInterface
      * @return 
      */
     public function updateReservation($request,$id) {
-        $reservations = Reservations::FindorFail($id);
+        $reservations = Reservation::FindorFail($id);
         $reservations->hotel_name = $request->name;
         $reservations->num_of_guests = $request->guest;
         $reservations->arrival = $request->arrival;
@@ -68,7 +68,7 @@ class ReservationDao implements ReservationDaoInterface
      * @return 
      */
     public function deleteReservation($id) {
-        Reservations::findOrFail($id)->delete();
+        Reservation::findOrFail($id)->delete();
     }
     /**
     * To export reservation
