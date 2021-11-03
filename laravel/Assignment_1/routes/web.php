@@ -66,3 +66,17 @@ Route::get('/search', [ReservationController::class, 'searchForm']);
  * Search Reservation
  */
 Route::post('/search-reservation', [ReservationController::class, 'searchReservation']);
+
+//API
+/**
+ * Get Reservation
+ */
+Route::get('/api-view', function() {
+    return view('API.reservations');
+    }
+);
+
+Route::get('/api-view/edit-view/{id}', function() {
+    return view('API.edit-view');
+    }
+);

@@ -103,7 +103,7 @@
               <form action="/update/{{ $reservation->id }}" method="POST" >
               {{ csrf_field() }}
                 <button type="submit" class="btn btn-warning">
-                  <i class="fa fa-btn fa-pencil"></i>Update
+                  <i class="fa fa-btn fa-pencil-alt"></i>Update
                 </button>
               </form>
             </td>
