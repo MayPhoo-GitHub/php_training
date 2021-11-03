@@ -28,8 +28,8 @@ $.ajax({
 
 function add() {
     var data = {
-        hotel_name: $("#name").val(),
-        num_of_guests: $("#guest").val(),
+        name: $("#name").val(),
+        guest: $("#guest").val(),
         arrival: $("#arrival").val(),
         departure: $("#departure").val(),
     };
@@ -41,7 +41,7 @@ function add() {
         dataType: "json",
         success: function (res) {
             alert("Added successfully!");
-            Location.reload();
+            location.reload();
         },
     });
 }
@@ -64,8 +64,8 @@ function edit(id) {
     console.log(id);
     if (confirm("Do you want to update?") == true) {
         var data = {
-            hotel_name: $("#name").val(),
-            num_of_guests: $("#guest").val(),
+            name: $("#name").val(),
+            guest: $("#guest").val(),
             arrival: $("#arrival").val(),
             departure: $("#departure").val(),
         };
