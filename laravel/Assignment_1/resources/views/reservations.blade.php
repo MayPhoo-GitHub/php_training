@@ -9,7 +9,7 @@
   @include('common.errors')
 
   <!-- New reservation Form -->
-  <form action="/reservation" method="POST" class="form-horizontal">
+  <form action="/reservation                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 " method="POST" class="form-horizontal">
     {{ csrf_field() }}
 
     <!-- reservation Name -->

@@ -80,3 +80,9 @@ Route::get('/api-view/edit-view/{id}', function() {
     return view('API.edit-view');
     }
 );
+
+Route::get('/send/http', 'SendEmailController@sendHttp');
+Route::get('/send/markdown', 'SendEmailController@sendMarkdown');
+Route::get('/send/notification', 'SendEmailController@sendNotification');
+
+Route::get('/reservation/mail', [ReservationController::class, 'NewReservation']);

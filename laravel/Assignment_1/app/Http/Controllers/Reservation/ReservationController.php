@@ -7,6 +7,8 @@ use App\Contracts\Services\Reservation\ReservationServiceInterface;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ReservationRequest;
 use Illuminate\Http\Request;
+use App\Mail\NewReservation;
+use Illuminate\Support\Facades\Mail;
 
 /**
  * This is Reservation controller.
@@ -54,7 +56,7 @@ class ReservationController extends Controller
     public function addReservation(ReservationRequest $request) {
         $validated = $request->validated();
         $Reservation = $this->ReservationInterface->addReservation($request);
-        return redirect('/');
+        return redirect('/reservation/mail');
     }
 
         /**
@@ -117,6 +119,18 @@ class ReservationController extends Controller
         $reservations = $this->ReservationInterface->searchReservation($request);
         return view('search', ['reservations' => $reservations]);
     }
-
+    
+    /**
+     * To Send Mail
+     */
+    public function NewReservation()
+    {
+        $data = [
+            'title' => '[new reservation added]',
+            'body' => 'New reservation record is send to admin by email'
+        ];
+        Mail::to('mayphoowai@gmail.com')->send(new NewReservation($data));
+        dd("Email is Sent, please check your inbox.");
+    }
 
 }

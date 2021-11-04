@@ -45,6 +45,7 @@
         <a class="navbar-brand" href="{{ url('/api-view') }}">
           API
         </a>
+    
       </div>
 
     </div>
