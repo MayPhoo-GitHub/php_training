@@ -33,7 +33,6 @@ function add() {
         arrival: $("#arrival").val(),
         departure: $("#departure").val(),
     };
-    console.log(data);
     $.ajax({
         type: "POST",
         url: "/api/add",
@@ -61,7 +60,6 @@ function deleteReservation(id) {
 
 //Update
 function edit(id) {
-    console.log(id);
     if (confirm("Do you want to update?") == true) {
         var data = {
             name: $("#name").val(),
@@ -69,7 +67,6 @@ function edit(id) {
             arrival: $("#arrival").val(),
             departure: $("#departure").val(),
         };
-        console.log(data);
         $.ajax({
             url: "/api/edit/" + id,
             type: "POST",
@@ -84,14 +81,12 @@ function edit(id) {
 
 $(function () {
     var id = window.location.pathname.split("/")[3];
-    console.log(id);
     if (id != null) {
         $.ajax({
             url: "/api/edit-view/" + id,
             type: "GET",
             dataType: "json",
             success: function (data) {
-                console.log(data);
                 $("#edit-form").append(
                     ` 
                     <!-- reservation Name -->

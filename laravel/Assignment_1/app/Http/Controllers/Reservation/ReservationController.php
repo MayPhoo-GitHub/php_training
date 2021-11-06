@@ -129,8 +129,7 @@ class ReservationController extends Controller
             'title' => '[new reservation added]',
             'body' => 'New reservation record is send to admin by email'
         ];
-        Mail::to('mayphoowai@gmail.com')->send(new NewReservation($data));
-        dd("Email is Sent, please check your inbox.");
+        Mail::to('mayphoowai@gmail.com')->send(new NewReservation($data));       
     }
 
 }
